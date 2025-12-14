@@ -1,177 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>December/Year End Date Proposal 🌺</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Year End / December Date Proposal </title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: url('pic.jpg') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #333;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .card {
-      backdrop-filter: blur(8px);
-      background: rgba(255, 255, 255, 0.88);
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url('pic.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
 
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 30px 35px;
-      max-width: 520px;
-      width: 100%;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
+.card {
+  backdrop-filter: blur(8px);
+  background: rgba(241, 234, 238, 0.9);
+  border-radius: 20px;
+  padding: 30px 35px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: fadeUp 0.8s ease;
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .subtitle {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #666;
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-    .section {
-      margin-bottom: 22px;
-    }
+.subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #666;
+}
 
-    .section h3 {
-      margin-bottom: 10px;
-      color: #e76f51;
-    }
+.section {
+  margin-bottom: 22px;
+}
 
-    .details p {
-      margin: 6px 0;
-    }
+.section h3 {
+  margin-bottom: 10px;
+  color: #e76f51;
+}
 
-    ul {
-      padding-left: 18px;
-      margin: 0;
-    }
+.details p {
+  margin: 6px 0;
+}
 
-    ul li {
-      margin-bottom: 8px;
-    }
+ul {
+  padding-left: 18px;
+  margin: 0;
+}
 
-    .choices {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 10px;
-    }
+ul li {
+  margin-bottom: 8px;
+}
 
-    button {
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid #ddd;
-      background: #f9f9f9;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
 
-    button:hover {
-      background: #ffe8d6;
-      transform: translateY(-2px);
-    }
+button {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
-    .footer {
-      margin-top: 25px;
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+button:hover {
+  background: #ffe8d6;
+  box-shadow: 0 6px 14px rgba(231, 111, 81, 0.25);
+  transform: translateY(-2px);
+}
+
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: none;
+  margin-top: 30px;
+}
+
+.gallery.active {
+  display: block;
+}
+
+.place-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.place-title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.place-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.place-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>🌺 Year End/December Date Proposal #1 🌺</h1>
-    <p class="subtitle">Stephen and Chelsey 💛</p>
+<div class="card">
+  <h1>🌺 December Date Proposal 🌺</h1>
+  <p class="subtitle">Wrapping up 2025 (Stephen and Chelsey) 💛</p>
 
-    <div class="section details">
-      <h3>📌 Important Details</h3>
-      <p>📍 <strong>Location:</strong> Makati</p>
-      <p>🗓️ <strong>Date:</strong> December 17, 2025 (Wednesday)</p>
-      <p>🕐 <strong>Time:</strong> 1:00 PM onwards</p>
-      <p>🤝 <strong>Meet-up:</strong> Glorietta 4 / Glorietta 5 / One Ayala</p>
-      <p>💸 <strong>Budget:</strong> ₱1,000–₱1,500 (flexible, wise spending ✨)</p>
+  <div class="section details">
+    <h3>📌 Important Details</h3>
+    <p>📍 <strong>Location:</strong> Makati</p>
+    <p>🗓️ <strong>Date:</strong> December 17, 2025 (Wednesday)</p>
+    <p>🕐 <strong>Time:</strong> 1:00 PM onwards</p>
+    <p>🤝 <strong>Meet-up:</strong> Glorietta 4 / Glorietta 5 / One Ayala</p>
+    <p>💸 <strong>Budget:</strong> ₱1,000–₱1,500</p>
+  </div>
+
+  <div class="section">
+    <h3>📌 Agenda</h3>
+    <ul>
+      <li>Leisure stroll around Glorietta / Greenbelt 🌿 (I have something to check)</li>
+      <li>Bowling/Basketball Date at Timezone 🎳</li>
+      <li>Coffee & dessert ☕🍰 (Suggested coffee shop below)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>👗👕 Outfit Color</h3>
+    <div class="choices">
+      <button>🤘🏻 Green</button>
+      <button>✋🏻 Black</button>
+      <button>👊🏻 White</button>
+      <button>🫶🏻 Brown</button>
     </div>
+    <p id="result" style="margin-top:10px;font-weight:500;"></p>
+  </div>
 
-    <div class="section">
-      <h3>📌 Agenda</h3>
-      <ul>
-        <li>Leisure stroll around Glorietta / Legazpi Active Park / nearby places</li>
-        <li>Bowling date at Timezone (Greenbelt) 🎳</li>
-        <li>Coffee + dessert at Kazu Café / FRMGMT Coffee / your suggestion ☕🍰</li>
-      </ul>
-    </div>
+  <div class="section" style="text-align:center;">
+    <button onclick="toggleGallery()">📸 View Places We’ll Visit</button>
+  </div>
 
-    <div class="section">
-      <h3>👗👕 Outfit Color</h3>
-      <p>Choose one and send me the emoji:</p>
-      <div class="choices">
-        <button>🤘🏻 Green</button>
-        <button>✋🏻 Black</button>
-        <button>👊🏻 White</button>
-        <button>🫶🏻 Brown</button>
+  <!-- GALLERY -->
+  <div id="gallery" class="gallery">
+    <h3>📍 Our Date Spots</h3>
+
+    <div class="place-card">
+      <div class="place-title">Glorietta/GreenBelt/Legazpi Park 🌿</div>
+      <div class="place-grid">
+        <img src="glorietta.jpg">
+        <img src="legazpi.jpg">
       </div>
-      <p id="result" style="margin-top:10px;font-weight:500;"></p>
     </div>
 
-    <div class="section">
-      <h3>💌 Your Response</h3>
-      <div class="choices">
-        <button onclick="respond('yes')">Yes 💖</button>
-        <button onclick="respond('maybe')">Maybe 🙂</button>
-        <button onclick="respond('no')">Not this time 🤍</button>
+    <div class="place-card">
+      <div class="place-title">Timezone Bowling/Basketball (4/F Glorietta 4, Ayala Center, Makati City.) 🎳</div>
+      <div class="place-grid">
+        <img src="timezone.png">
+        <img src="timezone2.jpg">
       </div>
-      <p id="response-message" style="margin-top:12px;text-align:center;font-weight:500;"></p>
     </div>
 
-    <div class="footer">
-      Can't wait to see you! Once you've choose a color, send a screenshot. Once you say yes, you will also be directed to messenger so I'll know your answer. 🌷
+    <div class="place-card">
+      <div class="place-title">Coffee & Dessert ☕🍰 (Unit 05-06, Ground Level, Restaurant at Ayala Triangle Gardens)</div>
+      <div class="place-grid">
+        <img src="kazu.jpeg">
+        <img src="kazu2.jpg">
+      </div>
     </div>
   </div>
 
-  <script>
-    const buttons = document.querySelectorAll('.choices button');
+  <div class="section">
+    <h3>💌 Your Response</h3>
+    <div class="choices">
+      <button onclick="respond('yes')">Yes 💖</button>
+      <button onclick="respond('maybe')">Maybe 🙂</button>
+      <button onclick="respond('no')">Not this time 🤍</button>
+    </div>
+  </div>
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const choice = button.innerText;
-        buttons.forEach(b => b.style.background = '#f9f9f9');
-        button.style.background = '#ffd6a5';
-        document.getElementById('result').innerText = `You chose: ${choice} 💛`;
-      });
-    });
+  <div class="footer">
+    Choose a color and send a screenshot.  
+    Saying yes will open Messenger. Places can be changed depending on your preferences! I can go anywhere & I'm fine with anything as long as I'm with you
+  </div>
+</div>
 
-    function respond(answer) {
-      let message = '';
-      if (answer === 'yes') {
-        message = "Yes, My Princess Chelsey 💖 I’d love to go on our December 17 date!";
-      } else if (answer === 'maybe') {
-        message = "Maybe 🙂 Can we talk about the December 17 date?";
-      } else {
-        message = "Not this time 🤍 but thank you for the invite.";
-      }
+<script>
+const buttons = document.querySelectorAll('.choices button');
 
-      const encodedMessage = encodeURIComponent(message);
-      // Opens Facebook Messenger chat (works best on mobile / logged-in browser)
-      window.open(`https://m.me/?text=${encodedMessage}`, '_blank');
-    }
-  </script>
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const choice = button.innerText;
+    buttons.forEach(b => b.style.background = '#f9f9f9');
+    button.style.background = '#ffd6a5';
+    document.getElementById('result').innerText = `You chose: ${choice} 💛`;
+  });
+});
+
+function toggleGallery() {
+  const gallery = document.getElementById('gallery');
+  gallery.classList.toggle('active');
+  gallery.scrollIntoView({ behavior: 'smooth' });
+}
+
+function respond(answer) {
+  let message = '';
+  if (answer === 'yes') {
+    message = "Yes 💖 I’d love to go on our December 17 date!";
+  } else if (answer === 'maybe') {
+    message = "Maybe 🙂 Can we talk about the December 17 date?";
+  } else {
+    message = "Not this time 🤍 but thank you for the invite.";
+  }
+  window.open(`https://m.me/?text=${encodeURIComponent(message)}`, '_blank');
+}
+</script>
+
 </body>
 </html>
+
