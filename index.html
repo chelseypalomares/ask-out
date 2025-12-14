@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>December Date Proposal 🌺</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: url('pic.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .card {
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.88);
+
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px 35px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #666;
+    }
+
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section h3 {
+      margin-bottom: 10px;
+      color: #e76f51;
+    }
+
+    .details p {
+      margin: 6px 0;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      background: #ffe8d6;
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🌺 December Date Proposal #1 🌺</h1>
+    <p class="subtitle">Hi Stephen, I wanted to ask you out 💛</p>
+
+    <div class="section details">
+      <h3>📌 Important Details</h3>
+      <p>📍 <strong>Location:</strong> Makati</p>
+      <p>🗓️ <strong>Date:</strong> December 17, 2025 (Wednesday)</p>
+      <p>🕐 <strong>Time:</strong> 1:00 PM onwards</p>
+      <p>🤝 <strong>Meet-up:</strong> Glorietta 4 / Glorietta 5 / One Ayala</p>
+      <p>💸 <strong>Budget:</strong> ₱1,000–₱1,500 (flexible, wise spending ✨)</p>
+    </div>
+
+    <div class="section">
+      <h3>📌 Agenda</h3>
+      <ul>
+        <li>Leisure stroll around Glorietta / Legazpi Active Park / nearby places</li>
+        <li>Bowling date at Timezone (Greenbelt) 🎳</li>
+        <li>Coffee + dessert at Kazu Café / FRMGMT Coffee / your suggestion ☕🍰</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>👗👕 Outfit Color</h3>
+      <p>Choose one and send me the emoji:</p>
+      <div class="choices">
+        <button>🤘🏻 Green</button>
+        <button>✋🏻 Black</button>
+        <button>👊🏻 White</button>
+        <button>🫶🏻 Brown</button>
+      </div>
+      <p id="result" style="margin-top:10px;font-weight:500;"></p>
+    </div>
+
+    <div class="section">
+      <h3>💌 Your Response</h3>
+      <div class="choices">
+        <button onclick="respond('yes')">Yes 💖</button>
+        <button onclick="respond('maybe')">Maybe 🙂</button>
+        <button onclick="respond('no')">Not this time 🤍</button>
+      </div>
+      <p id="response-message" style="margin-top:12px;text-align:center;font-weight:500;"></p>
+    </div>
+
+    <div class="footer">
+      Can't wait to see you! Please take a screenshot when you're done answering 🌷
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.choices button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const choice = button.innerText;
+        buttons.forEach(b => b.style.background = '#f9f9f9');
+        button.style.background = '#ffd6a5';
+        document.getElementById('result').innerText = `You chose: ${choice} 💛`;
+      });
+    });
+
+    function respond(answer) {
+      let message = '';
+      if (answer === 'yes') {
+        message = "Yes, My Princess 💖 I’d love to go on our December 17 date!";
+      } else if (answer === 'maybe') {
+        message = "Maybe 🙂 Can we talk about the December 17 date?";
+      } else {
+        message = "Not this time 🤍 but thank you for the invite.";
+      }
+
+      const encodedMessage = encodeURIComponent(message);
+      // Opens Facebook Messenger chat (works best on mobile / logged-in browser)
+      window.open(`https://m.me/?text=${encodedMessage}`, '_blank');
+    }
+  </script>
+</body>
+</html>
